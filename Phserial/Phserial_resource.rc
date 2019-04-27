@@ -1,6 +1,6 @@
 #include <windows.h>
 
-IDI_ICON1	ICON	DISCARDABLE	"E:\\Qtapp\\phsrial-4-12\\phsrial\\Phserial\\reph.ico"
+IDI_ICON1	ICON	DISCARDABLE	"F:\\qtapp\\QT\\QtSerial\\Phserial\\reph.ico"
 
 VS_VERSION_INFO VERSIONINFO
 	FILEVERSION 0,0,0,0

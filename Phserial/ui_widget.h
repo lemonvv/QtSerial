@@ -126,11 +126,17 @@ public:
 
         lineEdit_station = new QLineEdit(Widget);
         lineEdit_station->setObjectName(QStringLiteral("lineEdit_station"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(lineEdit_station->sizePolicy().hasHeightForWidth());
+        lineEdit_station->setSizePolicy(sizePolicy);
 
         horizontalLayout->addWidget(lineEdit_station);
 
         pushButton_stationSet = new QPushButton(Widget);
         pushButton_stationSet->setObjectName(QStringLiteral("pushButton_stationSet"));
+        pushButton_stationSet->setMaximumSize(QSize(75, 23));
 
         horizontalLayout->addWidget(pushButton_stationSet);
 
@@ -150,11 +156,14 @@ public:
 
         lineEdit_freq = new QLineEdit(Widget);
         lineEdit_freq->setObjectName(QStringLiteral("lineEdit_freq"));
+        sizePolicy.setHeightForWidth(lineEdit_freq->sizePolicy().hasHeightForWidth());
+        lineEdit_freq->setSizePolicy(sizePolicy);
 
         horizontalLayout_2->addWidget(lineEdit_freq);
 
         pushButton_freqSet = new QPushButton(Widget);
         pushButton_freqSet->setObjectName(QStringLiteral("pushButton_freqSet"));
+        pushButton_freqSet->setMaximumSize(QSize(75, 23));
 
         horizontalLayout_2->addWidget(pushButton_freqSet);
 
@@ -171,12 +180,15 @@ public:
 
         lineEdit_samp = new QLineEdit(Widget);
         lineEdit_samp->setObjectName(QStringLiteral("lineEdit_samp"));
+        sizePolicy.setHeightForWidth(lineEdit_samp->sizePolicy().hasHeightForWidth());
+        lineEdit_samp->setSizePolicy(sizePolicy);
 
         horizontalLayout_3->addWidget(lineEdit_samp);
 
         pushButton_sampSet = new QPushButton(Widget);
         pushButton_sampSet->setObjectName(QStringLiteral("pushButton_sampSet"));
         pushButton_sampSet->setEnabled(true);
+        pushButton_sampSet->setMaximumSize(QSize(75, 23));
 
         horizontalLayout_3->addWidget(pushButton_sampSet);
 
@@ -193,11 +205,16 @@ public:
 
         lineEdit_pulse = new QLineEdit(Widget);
         lineEdit_pulse->setObjectName(QStringLiteral("lineEdit_pulse"));
+        sizePolicy.setHeightForWidth(lineEdit_pulse->sizePolicy().hasHeightForWidth());
+        lineEdit_pulse->setSizePolicy(sizePolicy);
 
         horizontalLayout_4->addWidget(lineEdit_pulse);
 
         pushButton_pulseSet = new QPushButton(Widget);
         pushButton_pulseSet->setObjectName(QStringLiteral("pushButton_pulseSet"));
+        sizePolicy.setHeightForWidth(pushButton_pulseSet->sizePolicy().hasHeightForWidth());
+        pushButton_pulseSet->setSizePolicy(sizePolicy);
+        pushButton_pulseSet->setMaximumSize(QSize(75, 23));
 
         horizontalLayout_4->addWidget(pushButton_pulseSet);
 
@@ -215,12 +232,24 @@ public:
         comboBox_serialPort = new QComboBox(Widget);
         comboBox_serialPort->setObjectName(QStringLiteral("comboBox_serialPort"));
         comboBox_serialPort->setEnabled(true);
+        sizePolicy.setHeightForWidth(comboBox_serialPort->sizePolicy().hasHeightForWidth());
+        comboBox_serialPort->setSizePolicy(sizePolicy);
+        comboBox_serialPort->setMinimumSize(QSize(100, 20));
+        comboBox_serialPort->setMaximumSize(QSize(100, 20));
+        comboBox_serialPort->setSizeIncrement(QSize(0, 0));
+        comboBox_serialPort->setBaseSize(QSize(0, 0));
         comboBox_serialPort->setEditable(false);
 
         horizontalLayout_5->addWidget(comboBox_serialPort);
 
         pushButton_serchSerial = new QPushButton(Widget);
         pushButton_serchSerial->setObjectName(QStringLiteral("pushButton_serchSerial"));
+        sizePolicy.setHeightForWidth(pushButton_serchSerial->sizePolicy().hasHeightForWidth());
+        pushButton_serchSerial->setSizePolicy(sizePolicy);
+        pushButton_serchSerial->setMinimumSize(QSize(75, 23));
+        pushButton_serchSerial->setMaximumSize(QSize(73, 23));
+        pushButton_serchSerial->setSizeIncrement(QSize(0, 0));
+        pushButton_serchSerial->setBaseSize(QSize(0, 0));
 
         horizontalLayout_5->addWidget(pushButton_serchSerial);
 
@@ -241,11 +270,23 @@ public:
         comboBox_serialBaund->addItem(QString());
         comboBox_serialBaund->setObjectName(QStringLiteral("comboBox_serialBaund"));
         comboBox_serialBaund->setEnabled(true);
+        sizePolicy.setHeightForWidth(comboBox_serialBaund->sizePolicy().hasHeightForWidth());
+        comboBox_serialBaund->setSizePolicy(sizePolicy);
+        comboBox_serialBaund->setMinimumSize(QSize(100, 20));
+        comboBox_serialBaund->setMaximumSize(QSize(100, 20));
+        comboBox_serialBaund->setSizeIncrement(QSize(0, 0));
+        comboBox_serialBaund->setBaseSize(QSize(0, 0));
 
         horizontalLayout_6->addWidget(comboBox_serialBaund);
 
         pushButton_openSerial = new QPushButton(Widget);
         pushButton_openSerial->setObjectName(QStringLiteral("pushButton_openSerial"));
+        sizePolicy.setHeightForWidth(pushButton_openSerial->sizePolicy().hasHeightForWidth());
+        pushButton_openSerial->setSizePolicy(sizePolicy);
+        pushButton_openSerial->setMinimumSize(QSize(75, 23));
+        pushButton_openSerial->setMaximumSize(QSize(75, 23));
+        pushButton_openSerial->setSizeIncrement(QSize(0, 0));
+        pushButton_openSerial->setBaseSize(QSize(0, 0));
 
         horizontalLayout_6->addWidget(pushButton_openSerial);
 
