@@ -22,6 +22,7 @@ public:
     void searchSerial();
     void wrdata_agreement(QByteArray &wrdata);
     void show_Widgets();
+    void show_setData();
     ~Widget();
 
 private slots:

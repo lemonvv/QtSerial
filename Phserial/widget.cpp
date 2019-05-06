@@ -20,6 +20,7 @@ Widget::Widget(QWidget *parent) :
     timer->start(10000);    //串口没打开时，设置每隔10秒扫描一次可用串口
     searchSerial();
     show_Widgets();
+    show_setData();
 }
 
 Widget::~Widget()
@@ -80,7 +81,7 @@ void Widget::on_pushButton_openSerial_clicked()
         else
         {
             ui->pushButton_openSerial->setText("打开");
-            QMessageBox::warning(NULL,"Warning","串口打开错误",QMessageBox::Close);
+            QMessageBox::warning(nullptr,"Warning","串口打开错误",QMessageBox::Close);
 
         }
 
@@ -151,7 +152,7 @@ void Widget::on_pushButton_stationSet_clicked()
     int snum;
     if(!str.isEmpty())
     {
-        snum = str.toInt(0,10);     //字符串转整形数据
+        snum = str.toInt(nullptr,10);     //字符串转整形数据
         sLidata.setNum(snum,16);    //转换为16进制数据
         HexsLidata = QByteArray::fromHex(sLidata);  //十六进制hex
         cData[0] = 0xB0;  //写
@@ -285,4 +286,13 @@ void Widget::show_Widgets()
         ui->lineEdit_samp->setEnabled(true);
         ui->lineEdit_station->setEnabled(true);
     }
+}
+
+void Widget::show_setData()
+{
+    ui->lineEdit_station->setText("1");
+    ui->lineEdit_freq->setText("435575000");
+    ui->lineEdit_samp->setText("20");
+    ui->lineEdit_pulse->setText("1");
+    ui->textBrowser_recvData->setText("站号：1-8，脉冲获取：1为光纤，2为红外。");
 }
